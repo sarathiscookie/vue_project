@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+
+    <title>Vue JS</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="container">
+            Stock: <span v-if="stockStatus">{{ message }}</span>
+            Stock %: <span v-for="cal in stockCalculations"> 
+                <p v-if="stock === cal.id"> {{ cal.percentage }} </p> 
+            </span>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="./js/conditionalsAndLoops.js"></script>
+
+</body>
+
+</html>
